@@ -1,0 +1,10 @@
+ $to = $_POST['forget_mail'];
+		$subject = "Password set for STUDIESON";
+		$txt = "";
+		$txt = "https://www.studieson.com/index.php/Login/reset_password?uid=".$data['email_set'][0]['uid'];
+		$headers = "From: duttarathi444@gmail.com";
+		mail($to,$subject,$txt,$headers);
+		echo "all ok";
+       }else{
+         echo "email id is not correct"; 
+       }
